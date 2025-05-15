@@ -18,17 +18,20 @@ public class DateServlet extends HttpServlet {
 
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		//get PrintWriter
-		PrintWriter pw = res.getWriter();
+		//PrintWriter pw = res.getWriter();
 		//set response type
 		res.setContentType("text/html");
 		
 		//business logic
 		Date date = new Date();
 		//write response
-		pw.println("<h1> Date and Time::"+date+"</h1>");
+	//	pw.println("<h1> Date and Time::"+date+"</h1>");
 		
+		req.setAttribute("time", date);
+		
+		req.getRequestDispatcher("index.jsp").forward(req, res);
 		//close the stream
-		pw.close();      
+	//	pw.close();      
 		
 	}
 
