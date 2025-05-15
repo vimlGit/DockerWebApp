@@ -24,11 +24,11 @@ public class DateServlet extends HttpServlet {
 		
 		//business logic
 		Date date = new Date();
-		//response
+		//write response
 		pw.println("<h1> Date and Time::"+date+"</h1>");
 		
 		//close the stream
-		pw.close();
+		pw.close();      
 		
 	}
 
